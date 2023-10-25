@@ -13,49 +13,16 @@
   <a href="https://tailwindcss.com/">
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Logo" width="80" height="80">
   </a>
-
-<h3 align="center">Vite Boilerplate</h3>
-  <p align="center">
-    Boilerplate for creating a React, TypeScript, and Tailwind CSS project using Vite.
-  </p>
+  <br />
+  <br />
+  <h1 align="center">Vite React Boilerplate</h1>
 </div>
 
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about">About</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-        <li><a href="#optional">Optional</a></li>
-      </ul>
-    </li>
-    <li><a href="#configuration">Configuration</a></li>
-  </ol>
-</details>
+[![Vite][Vite]][Vite-url] [![React][React]][React-url] [![TypeScript][TypeScript]][TypeScript-url] [![Tailwind][Tailwind]][Tailwind-url] [![ESLint][ESLint]][ESLint-url]
 
-## About
-
-This a boilerplate template to get you started on a Vite project using React, TypeScript, and Tailwind CSS.
-
-### Built With
-
-- [![Vite][Vite]][Vite-url]
-- [![React][React]][React-url]
-- [![TypeScript][TypeScript]][TypeScript-url]
-- [![Tailwind][Tailwind]][Tailwind-url]
-- [![ESLint][ESLint]][ESLint-url]
+This is a boilerplate template intended to get you started on a React project built under Vite. Includes TypeScript, Tailwind CSS, ESLint, Vitest, and React Testing Library support.
 
 ## Getting Started
-
-Follow the steps below to get started on using this boilerplate to kickstart your project!
 
 ### Prerequisites
 
@@ -63,23 +30,45 @@ Follow the steps below to get started on using this boilerplate to kickstart you
 
 ### Installation
 
-1. Clone the repo
+1. [Fork](https://github.com/itsdanielg/vite-react-boilerplate/fork) or clone this repository to get started.
 
    ```sh
    git clone https://github.com/itsdanielg/vite-boilerplate.git
    ```
 
-2. Install NPM packages
+2. Navigate to the project's directory and install all dependencies.
 
    ```sh
+   cd vite-boilerplate
    npm install
    ```
 
 ### Optional
 
-If you would like to have all the project dependencies updated, make sure [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) is globally installed.
+If you would like to re-initialize git:
 
-1. Install [npm-check-updates](https://www.npmjs.com/package/npm-check-updates).
+1. Navigate to the project's directory and delete `.git`.
+
+   ```sh
+   rm -rf .git
+   ```
+
+2. Re-initialize `.git`.
+
+   ```sh
+   git init
+   ```
+
+3. Commit all changes.
+
+   ```sh
+   git add .
+   git commit -m "Init"
+   ```
+
+If you would like to have all project dependencies updated, make sure [npm-check-updates](https://www.npmjs.com/package/npm-check-updates) is globally installed.
+
+1. Install [npm-check-updates](https://www.npmjs.com/package/npm-check-updates). (Skip to step 2 if it has already been installed)
 
    ```sh
    npm i -g npm-check-updates
@@ -99,7 +88,18 @@ If you would like to have all the project dependencies updated, make sure [npm-c
 
 ## Configuration
 
-This project also comes with [ESLint][ESLint-url] and [Prettier](https://prettier.io/) already installed and preconfigured.
+This project also comes with [ESLint][ESLint-url] and [Prettier](https://prettier.io/) installed and preconfigured.
+
+- ESLint configurations can be found and edited within the `.eslintrc.cjs` file. The following rules below have also been added.
+
+  ```json
+  rules: {
+    "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/no-unused-vars": "warn"
+  }
+  ```
 
 - Prettier configurations can be found and edited within the `.prettierrc` file.
 
@@ -112,7 +112,7 @@ This project also comes with [ESLint][ESLint-url] and [Prettier](https://prettie
     "htmlWhitespaceSensitivity": "css",
     "insertPragma": false,
     "jsxSingleQuote": false,
-    "printWidth": 80,
+    "printWidth": 120,
     "proseWrap": "preserve",
     "quoteProps": "as-needed",
     "requirePragma": false,
@@ -124,9 +124,6 @@ This project also comes with [ESLint][ESLint-url] and [Prettier](https://prettie
     "useTabs": false
   }
   ```
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [ESLint]: https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white
 [ESLint-url]: https://eslint.org/
