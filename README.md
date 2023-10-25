@@ -92,7 +92,7 @@ This project also comes with [ESLint][ESLint-url] and [Prettier](https://prettie
 
 - ESLint configurations can be found and edited within the `.eslintrc.cjs` file. The following rules below have also been added.
 
-  ```json
+  ```cjs
   rules: {
     "react-refresh/only-export-components": ["warn", { allowConstantExport: true }],
     "react-hooks/exhaustive-deps": "off",
